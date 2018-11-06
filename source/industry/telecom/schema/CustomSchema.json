@@ -1,0 +1,3212 @@
+{
+  "schema": {
+    "cdr-start": {
+      "columns": [
+        {
+          "Name": "Record_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Gateway_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Accounting_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_system_ticks",
+          "Type": "integer"
+        },
+        {
+          "Name": "Node_Time_Zone",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_MM_DD_YYYY",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_HH_MM_SS_s",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Policy_Response",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Alert_Proc_Prog",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Service_Est",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Delivered",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Direction",
+          "Type": "string"
+        },
+        {
+          "Name": "Service_Provider",
+          "Type": "string"
+        },
+        {
+          "Name": "Transit_Network_Selection_Code_TNS",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Called_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Extra_Called_Address_Digits",
+          "Type": "string"
+        },
+        {
+          "Name": "Number_of_Called_Num_Translations",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__1",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__2",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__2",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Label",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Attempt_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Route_Selected",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_Line_Information_OLIP",
+          "Type": "integer"
+        },
+        {
+          "Name": "Jurisdiction_Information_Parameter_JIP",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Rx_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Generation_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_iTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_eTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Category",
+          "Type": "string"
+        },
+        {
+          "Name": "Dialed_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Selection_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Address_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Call_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Message_Billing_Indicator_MBI",
+          "Type": "string"
+        },
+        {
+          "Name": "LATA",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Index_Used",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Presentation_Restriction",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_ISUP_Charge_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_ISUP_Nature_Of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Dialed_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Global_Call_ID_GCID",
+          "Type": "string"
+        },
+        {
+          "Name": "Charge_Flag",
+          "Type": "integer"
+        },
+        {
+          "Name": "AMA_slp_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_BAF_Module",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Set_Hex_AB_Indication",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Feature_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "FE_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Satellite_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Billing_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Terminating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Switch_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_79",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_80",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_81",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_82",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Call_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Trunk_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Message_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Route_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Name_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_PPDN",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Last_Route_Attempt",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Selected_Route_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Cumulative_Route_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "ISDN_PRI_Calling_Party_Subaddress",
+          "Type": "string"
+        },
+        {
+          "Name": "Outgoing_Trunk_Group_Number_in_EXM",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Record_Sequence_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Transmission_Medium_Requirement",
+          "Type": "integer"
+        },
+        {
+          "Name": "Information_Transfer_Rate",
+          "Type": "integer"
+        },
+        {
+          "Name": "USI_User_Info_Layer_1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Unrecognized_Raw_ISUP_Calling_Party_Category",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Egress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Two_B_Channel_Transfer",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Redirecting",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Ingress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Congestion_Level",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Processing_Time_milliseconds",
+          "Type": "integer"
+        },
+        {
+          "Name": "Script_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Answer_Supervision_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Network_Transfers_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Condition",
+          "Type": "integer"
+        },
+        {
+          "Name": "Toll_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number__Number_",
+          "Type": "string"
+        },
+        {
+          "Name": "Generic_Number_Presentation_Restriction_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Originating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Terminating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "VPN_Calling_Public_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "VPN_Calling_Private_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "External_Furnish_Charging_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Announcement_Id",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Source_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Partition_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Network_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___NCOS",
+          "Type": "integer"
+        },
+        {
+          "Name": "ISDN_access_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Call_Identity",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Signaling_Point_Code",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Video_Data___Video_Bandwidth",
+          "Type": "string"
+        },
+        {
+          "Name": "SVS_Customer",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_149",
+          "Type": "string"
+        },
+        {
+          "Name": "Remote_GSX_Billing_Indicator_PCR1216_GSX_6_4_for_KDDI_special_V3",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_To_Test_PSX",
+          "Type": "integer"
+        },
+        {
+          "Name": "Psx_Overlap_Route_Requests",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Setup_Delay",
+          "Type": "string"
+        },
+        {
+          "Name": "Overload_Status",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_155",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_156",
+          "Type": "string"
+        },
+        {
+          "Name": "Multi_Level_Precedence",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_158",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_159",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_160",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_161",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_162",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_163",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_164",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_165",
+          "Type": "string"
+        },
+        {
+          "Name": "Global_Charge_Reference",
+          "Type": "string"
+        }
+      ]
+    },
+    "cdr-stop": {
+      "columns": [
+        {
+          "Name": "Record_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Gateway_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Accounting_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_system_ticks",
+          "Type": "integer"
+        },
+        {
+          "Name": "Node_Time_Zone",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_MM_DD_YYYY",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_HH_MM_SS_s",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Policy_Response",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Alert_Proc_Prog",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Service_Est",
+          "Type": "integer"
+        },
+        {
+          "Name": "Disconnect_Time_MM_DD_YYYY",
+          "Type": "string"
+        },
+        {
+          "Name": "Disconnect_Time_HH_MM_SS_s",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Disconnect_to_Call_Termination",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Service_Duration",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Reason",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Delivered",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Direction",
+          "Type": "string"
+        },
+        {
+          "Name": "Service_Provider",
+          "Type": "string"
+        },
+        {
+          "Name": "Transit_Network_Selection_Code_TNS",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Called_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Extra_Called_Address_Digits",
+          "Type": "string"
+        },
+        {
+          "Name": "Number_of_Called_Num_Translations",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__1",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__2",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__2",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Label",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Attempt_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Route_Selected",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Bytes_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Packets_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Bytes_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Packets_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_Line_Information_OLIP",
+          "Type": "integer"
+        },
+        {
+          "Name": "Jurisdiction_Information_Parameter_JIP",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Script_Log_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Rx_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Generation_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_iTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_eTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Category",
+          "Type": "string"
+        },
+        {
+          "Name": "Dialed_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Selection_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Address_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Disconnect_Initiator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Number_of_Packets_Recorded_as_Lost",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Interarrival_Packet_Jitter",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Last_Measurement_for_Latency",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Call_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Message_Billing_Indicator_MBI",
+          "Type": "string"
+        },
+        {
+          "Name": "LATA",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Index_Used",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Presentation_Restriction",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_ISUP_Charge_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_ISUP_Nature_Of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Dialed_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Codec_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Codec_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_RTP_Packetization_Time",
+          "Type": "integer"
+        },
+        {
+          "Name": "Global_Call_ID_GCID",
+          "Type": "string"
+        },
+        {
+          "Name": "Originator_Echo_Cancellation",
+          "Type": "integer"
+        },
+        {
+          "Name": "Terminator_Echo_Cancellation",
+          "Type": "integer"
+        },
+        {
+          "Name": "Charge_Flag",
+          "Type": "integer"
+        },
+        {
+          "Name": "AMA_slp_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_BAF_Module",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Set_Hex_AB_Indication",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Feature_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "FE_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Satellite_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Billing_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Terminating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Switch_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_98",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_99",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_100",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_101",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Call_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Trunk_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Message_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Route_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Name_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_PPDN",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Last_Route_Attempt",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Selected_Route_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Telcordia_Long_Duration_Record_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_From_Previous_Record",
+          "Type": "integer"
+        },
+        {
+          "Name": "Cumulative_Route_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Reason_Sent_to_Ingress",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Reason_Sent_to_Egress",
+          "Type": "integer"
+        },
+        {
+          "Name": "ISDN_PRI_Calling_Party_Subaddress",
+          "Type": "string"
+        },
+        {
+          "Name": "Outgoing_Trunk_Group_Number_in_EXM",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Record_Sequence_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Transmission_Medium_Requirement",
+          "Type": "integer"
+        },
+        {
+          "Name": "Information_Transfer_Rate",
+          "Type": "integer"
+        },
+        {
+          "Name": "USI_User_Info_Layer_1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Unrecognized_Raw_ISUP_Calling_Party_Category",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Egress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Two_B_Channel_Transfer",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Redirecting",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Ingress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Congestion_Level",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Processing_Time_milliseconds",
+          "Type": "integer"
+        },
+        {
+          "Name": "Script_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_RTP_Packetization_Time",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Bytes_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Packets_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Bytes_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Packets_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Packets_Recorded_as_Lost",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Interarrival_Packet_Jitter",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Last_Measurement_for_Latency",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Maximum_Packet_Outage",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Maximum_Packet_Outage",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Packet_Playout_Buffer_Quality",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Packet_Playout_Buffer_Quality",
+          "Type": "string"
+        },
+        {
+          "Name": "Answer_Supervision_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Network_Transfers_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Condition",
+          "Type": "integer"
+        },
+        {
+          "Name": "Toll_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number__Number_",
+          "Type": "string"
+        },
+        {
+          "Name": "Generic_Number_Presentation_Restriction_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Originating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Terminating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Remote_GSX_Billing_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "VPN_Calling_Private_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "VPN_Calling_Public_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "External_Furnish_Charging_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Policing_Discards",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Policing_Discards",
+          "Type": "string"
+        },
+        {
+          "Name": "Announcement_Id",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Source_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Partition_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Network_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___NCOS",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_SRTP_Secure_RTP_RTCP",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_SRTP_Secure_RTP_RTCP",
+          "Type": "string"
+        },
+        {
+          "Name": "ISDN_access_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Location",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Location_Transmitted_to_Ingress",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Location_Transmitted_to_Egress",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Call_Identity",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Signaling_Point_Code",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Modem_Tone_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Modem_Tone_Signal_Level",
+          "Type": "integer"
+        },
+        {
+          "Name": "Video_Data___Video_Bandwidth",
+          "Type": "string"
+        },
+        {
+          "Name": "Video_Statistics__Ingress_Egress_Video_Statistics",
+          "Type": "string"
+        },
+        {
+          "Name": "SVS_Customer",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_195",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_To_Test_PSX",
+          "Type": "integer"
+        },
+        {
+          "Name": "Psx_Overlap_Route_Requests",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Setup_Delay",
+          "Type": "string"
+        },
+        {
+          "Name": "Overload_Status",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_200",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_201",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_DSP_Data_Bitamp",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_DSP_Data_Bitamp",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_204",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_205",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_206",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_207",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_208",
+          "Type": "string"
+        },
+        {
+          "Name": "Multi_Level_Precedence",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_210",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_211",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_212",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_213",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_214",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_215",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_216",
+          "Type": "string"
+        },
+        {
+          "Name": "Global_Charge_Reference",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_218",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_219",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_220",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_221",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_222",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_223",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_224",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_225",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Inbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Outbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Inbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Outbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_230",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_231",
+          "Type": "string"
+        },
+        {
+          "Name": "Transcoded_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Negotiated_HD_Codec_Rate",
+          "Type": "integer"
+        }
+      ]
+    },
+    "cdr-start-sample": {
+      "columns": [
+        {
+          "Name": "Record_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Gateway_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Accounting_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_system_ticks",
+          "Type": "integer"
+        },
+        {
+          "Name": "Node_Time_Zone",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_MM_DD_YYYY",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_HH_MM_SS_s",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Policy_Response",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Alert_Proc_Prog",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Service_Est",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Delivered",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Direction",
+          "Type": "string"
+        },
+        {
+          "Name": "Service_Provider",
+          "Type": "string"
+        },
+        {
+          "Name": "Transit_Network_Selection_Code_TNS",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Called_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Extra_Called_Address_Digits",
+          "Type": "string"
+        },
+        {
+          "Name": "Number_of_Called_Num_Translations",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__1",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__2",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__2",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Label",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Attempt_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Route_Selected",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_Line_Information_OLIP",
+          "Type": "integer"
+        },
+        {
+          "Name": "Jurisdiction_Information_Parameter_JIP",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Rx_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Generation_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_iTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_eTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Category",
+          "Type": "string"
+        },
+        {
+          "Name": "Dialed_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Selection_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Address_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Call_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Message_Billing_Indicator_MBI",
+          "Type": "string"
+        },
+        {
+          "Name": "LATA",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Index_Used",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Presentation_Restriction",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_ISUP_Charge_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_ISUP_Nature_Of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Dialed_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Global_Call_ID_GCID",
+          "Type": "string"
+        },
+        {
+          "Name": "Charge_Flag",
+          "Type": "integer"
+        },
+        {
+          "Name": "AMA_slp_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_BAF_Module",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Set_Hex_AB_Indication",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Feature_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "FE_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Satellite_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Billing_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Terminating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Switch_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_79",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_80",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_81",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_82",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Call_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Trunk_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Message_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Route_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Name_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_PPDN",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Last_Route_Attempt",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Selected_Route_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Cumulative_Route_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "ISDN_PRI_Calling_Party_Subaddress",
+          "Type": "string"
+        },
+        {
+          "Name": "Outgoing_Trunk_Group_Number_in_EXM",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Record_Sequence_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Transmission_Medium_Requirement",
+          "Type": "integer"
+        },
+        {
+          "Name": "Information_Transfer_Rate",
+          "Type": "integer"
+        },
+        {
+          "Name": "USI_User_Info_Layer_1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Unrecognized_Raw_ISUP_Calling_Party_Category",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Egress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Two_B_Channel_Transfer",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Redirecting",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Ingress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Congestion_Level",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Processing_Time_milliseconds",
+          "Type": "integer"
+        },
+        {
+          "Name": "Script_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Answer_Supervision_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Network_Transfers_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Condition",
+          "Type": "integer"
+        },
+        {
+          "Name": "Toll_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number__Number_",
+          "Type": "string"
+        },
+        {
+          "Name": "Generic_Number_Presentation_Restriction_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Originating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Terminating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "VPN_Calling_Public_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "VPN_Calling_Private_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "External_Furnish_Charging_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Announcement_Id",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Source_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Partition_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Network_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___NCOS",
+          "Type": "integer"
+        },
+        {
+          "Name": "ISDN_access_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Call_Identity",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Signaling_Point_Code",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Video_Data___Video_Bandwidth",
+          "Type": "string"
+        },
+        {
+          "Name": "SVS_Customer",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_149",
+          "Type": "string"
+        },
+        {
+          "Name": "Remote_GSX_Billing_Indicator_PCR1216_GSX_6_4_for_KDDI_special_V3",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_To_Test_PSX",
+          "Type": "integer"
+        },
+        {
+          "Name": "Psx_Overlap_Route_Requests",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Setup_Delay",
+          "Type": "string"
+        },
+        {
+          "Name": "Overload_Status",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_155",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_156",
+          "Type": "string"
+        },
+        {
+          "Name": "Multi_Level_Precedence",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_158",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_159",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_160",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_161",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_162",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_163",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_164",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_165",
+          "Type": "string"
+        },
+        {
+          "Name": "Global_Charge_Reference",
+          "Type": "string"
+        }
+      ]
+    },
+    "cdr-stop-sample": {
+      "columns": [
+        {
+          "Name": "Record_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Gateway_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Accounting_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_system_ticks",
+          "Type": "integer"
+        },
+        {
+          "Name": "Node_Time_Zone",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_MM_DD_YYYY",
+          "Type": "string"
+        },
+        {
+          "Name": "Start_Time_HH_MM_SS_s",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Policy_Response",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Alert_Proc_Prog",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Service_Est",
+          "Type": "integer"
+        },
+        {
+          "Name": "Disconnect_Time_MM_DD_YYYY",
+          "Type": "string"
+        },
+        {
+          "Name": "Disconnect_Time_HH_MM_SS_s",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Disconnect_to_Call_Termination",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Service_Duration",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Reason",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Delivered",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Direction",
+          "Type": "string"
+        },
+        {
+          "Name": "Service_Provider",
+          "Type": "string"
+        },
+        {
+          "Name": "Transit_Network_Selection_Code_TNS",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Called_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Extra_Called_Address_Digits",
+          "Type": "string"
+        },
+        {
+          "Name": "Number_of_Called_Num_Translations",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__1",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Before_Translation__2",
+          "Type": "string"
+        },
+        {
+          "Name": "Translation_Type__2",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Label",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Attempt_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Route_Selected",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_PSTN_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_IP_Circuit_End_Point",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Bytes_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Packets_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Bytes_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Number_of_Audio_Packets_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_Line_Information_OLIP",
+          "Type": "integer"
+        },
+        {
+          "Name": "Jurisdiction_Information_Parameter_JIP",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Script_Log_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Rx_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Generation_of_EXM",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Signaling_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Far_End_Switch_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_iTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Code_of_Carrier_who_Owns_eTG_Far_End",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Category",
+          "Type": "string"
+        },
+        {
+          "Name": "Dialed_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Carrier_Selection_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Address_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Disconnect_Initiator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Number_of_Packets_Recorded_as_Lost",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Interarrival_Packet_Jitter",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Last_Measurement_for_Latency",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Group_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_Calling_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Call_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Message_Billing_Indicator_MBI",
+          "Type": "string"
+        },
+        {
+          "Name": "LATA",
+          "Type": "string"
+        },
+        {
+          "Name": "Route_Index_Used",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Presentation_Restriction",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_ISUP_Charge_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "Incoming_ISUP_Nature_Of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Dialed_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Codec_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Codec_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_RTP_Packetization_Time",
+          "Type": "integer"
+        },
+        {
+          "Name": "Global_Call_ID_GCID",
+          "Type": "string"
+        },
+        {
+          "Name": "Originator_Echo_Cancellation",
+          "Type": "integer"
+        },
+        {
+          "Name": "Terminator_Echo_Cancellation",
+          "Type": "integer"
+        },
+        {
+          "Name": "Charge_Flag",
+          "Type": "integer"
+        },
+        {
+          "Name": "AMA_slp_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_BAF_Module",
+          "Type": "string"
+        },
+        {
+          "Name": "AMA_Set_Hex_AB_Indication",
+          "Type": "integer"
+        },
+        {
+          "Name": "Service_Feature_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "FE_Parameter",
+          "Type": "string"
+        },
+        {
+          "Name": "Satellite_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Billing_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Originating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Terminating_TDM_Trunk_Group_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Group_ID",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Switch_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_98",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_99",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_100",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_101",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Call_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Trunk_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Route_Message_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Route_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Name_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Outgoing_Calling_Party_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Group_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Calling_Party_PPDN",
+          "Type": "string"
+        },
+        {
+          "Name": "Ticks_from_Setup_Msg_to_Last_Route_Attempt",
+          "Type": "integer"
+        },
+        {
+          "Name": "Billing_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Incoming_Calling_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Trunk_Member_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Selected_Route_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Telcordia_Long_Duration_Record_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ticks_From_Previous_Record",
+          "Type": "integer"
+        },
+        {
+          "Name": "Cumulative_Route_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Reason_Sent_to_Ingress",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Reason_Sent_to_Egress",
+          "Type": "integer"
+        },
+        {
+          "Name": "ISDN_PRI_Calling_Party_Subaddress",
+          "Type": "string"
+        },
+        {
+          "Name": "Outgoing_Trunk_Group_Number_in_EXM",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Local_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Remote_Signaling_IP_Address",
+          "Type": "string"
+        },
+        {
+          "Name": "Record_Sequence_Number",
+          "Type": "integer"
+        },
+        {
+          "Name": "Transmission_Medium_Requirement",
+          "Type": "integer"
+        },
+        {
+          "Name": "Information_Transfer_Rate",
+          "Type": "integer"
+        },
+        {
+          "Name": "USI_User_Info_Layer_1",
+          "Type": "integer"
+        },
+        {
+          "Name": "Unrecognized_Raw_ISUP_Calling_Party_Category",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Egress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Two_B_Channel_Transfer",
+          "Type": "string"
+        },
+        {
+          "Name": "Calling_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "Called_Party_Business_Unit",
+          "Type": "integer"
+        },
+        {
+          "Name": "FSD__Redirecting",
+          "Type": "string"
+        },
+        {
+          "Name": "FSD__Ingress_Release_Link_Trunking",
+          "Type": "string"
+        },
+        {
+          "Name": "PSX_Index",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Congestion_Level",
+          "Type": "integer"
+        },
+        {
+          "Name": "PSX_Processing_Time_milliseconds",
+          "Type": "integer"
+        },
+        {
+          "Name": "Script_Name",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_External_Accounting_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_RTP_Packetization_Time",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Bytes_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Packets_Sent",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Bytes_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Audio_Packets_Received",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Number_of_Packets_Recorded_as_Lost",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Interarrival_Packet_Jitter",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Last_Measurement_for_Latency",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Maximum_Packet_Outage",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Maximum_Packet_Outage",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Packet_Playout_Buffer_Quality",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Packet_Playout_Buffer_Quality",
+          "Type": "string"
+        },
+        {
+          "Name": "Answer_Supervision_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Sip_Refer_or_Sip_Replaces_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Network_Transfers_Feature_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_Condition",
+          "Type": "integer"
+        },
+        {
+          "Name": "Toll_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number__Number_",
+          "Type": "string"
+        },
+        {
+          "Name": "Generic_Number_Presentation_Restriction_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Numbering_Plan",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Nature_of_Address",
+          "Type": "integer"
+        },
+        {
+          "Name": "Generic_Number_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Originating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Terminating_Trunk_Type",
+          "Type": "string"
+        },
+        {
+          "Name": "Remote_GSX_Billing_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "VPN_Calling_Private_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "VPN_Calling_Public_Presence_Number",
+          "Type": "string"
+        },
+        {
+          "Name": "External_Furnish_Charging_Info",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Policing_Discards",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_Policing_Discards",
+          "Type": "string"
+        },
+        {
+          "Name": "Announcement_Id",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Source_Information",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Partition_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___Network_ID",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Data___NCOS",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_SRTP_Secure_RTP_RTCP",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_SRTP_Secure_RTP_RTCP",
+          "Type": "string"
+        },
+        {
+          "Name": "ISDN_access_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Location",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Location_Transmitted_to_Ingress",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Disconnect_Location_Transmitted_to_Egress",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Call_Identity",
+          "Type": "integer"
+        },
+        {
+          "Name": "Network_Call_Reference___Signaling_Point_Code",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_MIME_Protocol_Variant_Specific_Data",
+          "Type": "string"
+        },
+        {
+          "Name": "Modem_Tone_Type",
+          "Type": "integer"
+        },
+        {
+          "Name": "Modem_Tone_Signal_Level",
+          "Type": "integer"
+        },
+        {
+          "Name": "Video_Data___Video_Bandwidth",
+          "Type": "string"
+        },
+        {
+          "Name": "Video_Statistics__Ingress_Egress_Video_Statistics",
+          "Type": "string"
+        },
+        {
+          "Name": "SVS_Customer",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_195",
+          "Type": "string"
+        },
+        {
+          "Name": "Call_To_Test_PSX",
+          "Type": "integer"
+        },
+        {
+          "Name": "Psx_Overlap_Route_Requests",
+          "Type": "integer"
+        },
+        {
+          "Name": "Call_Setup_Delay",
+          "Type": "string"
+        },
+        {
+          "Name": "Overload_Status",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_200",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_201",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_DSP_Data_Bitamp",
+          "Type": "string"
+        },
+        {
+          "Name": "Egress_DSP_Data_Bitamp",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_204",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_205",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_206",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_207",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_208",
+          "Type": "string"
+        },
+        {
+          "Name": "Multi_Level_Precedence",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_210",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_211",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_212",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_213",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_214",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_215",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_216",
+          "Type": "string"
+        },
+        {
+          "Name": "Global_Charge_Reference",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_218",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_219",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_220",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_221",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_222",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_223",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_224",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_225",
+          "Type": "string"
+        },
+        {
+          "Name": "Ingress_Inbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Ingress_Outbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Inbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Egress_Outbound_R_Factor",
+          "Type": "integer"
+        },
+        {
+          "Name": "Reserved_230",
+          "Type": "string"
+        },
+        {
+          "Name": "Reserved_231",
+          "Type": "string"
+        },
+        {
+          "Name": "Transcoded_Indicator",
+          "Type": "integer"
+        },
+        {
+          "Name": "Negotiated_HD_Codec_Rate",
+          "Type": "integer"
+        }
+      ]
+    }
+  }
+}

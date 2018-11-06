@@ -1,0 +1,29 @@
+{
+  "artifacts": {
+    "notebooks": {
+      "notebook1": "Ml-Telecom-NaiveBayes.ipynb",
+      "notebook2": "Ml-Telecom-PCA-KMeans.ipynb",
+      "notebook3": "Ml-Telecom-RandomCutForest.ipynb",
+      "notebook4": "Ml-Telecom-RandomForestClassifier.ipynb",
+      "notebook5": "Ml-Telecom-TimeSeries-RandomForestClassifier-DeepAR.ipynb"
+    },
+    "files": {
+      "cdr-start": "cdr_start.csv",
+      "cdr-stop": "cdr_stop.csv",
+      "cdr-start-sample": "cdr_start_sample.csv",
+      "cdr-stop-sample": "cdr_stop_sample.csv"
+    },
+    "schema": {
+      "custom-schema": "CustomSchema.json"
+    },
+    "scripts": {
+      "glue": "csv-to-parquet.py"
+    },
+    "configs": {
+      "sagemaker": "lifecycle-config.sh"
+    },
+    "models": {
+      "ml-for-telecom": "model.tar.gz"
+    }
+  }
+}

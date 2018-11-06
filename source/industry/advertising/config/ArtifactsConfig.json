@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "notebooks": {
+      "notebook1": "Ml_Workflow_for_advertising_SageMaker.ipynb",
+      "notebook2": "Ml_Workflow_for_advertising_SiteID_Sagemaker.ipynb"
+    },
+    "files": {
+      "activity": "generated_activities.csv.gz",
+      "impressions": "generated_impressions.csv.gz"
+    },
+    "schema": {
+      "custom-schema": "CustomSchema.json"
+    },
+    "scripts": {
+      "glue": "csv-to-parquet.py"
+    },
+    "configs": {
+      "sagemaker": "lifecycle-config.sh"
+    },
+    "models": {
+      "ml-for-advertising": "model.tar.gz"
+    }
+  }
+}
