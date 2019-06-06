@@ -22,7 +22,8 @@ download_files(){
 
     for notebook in "${notebooks[@]}"
         do
-          wget https://"${s3region}"/"${SRC_NOTEBOOK_DIR}"/"${notebook}" -P ${Sagedir}/${industry}
+          printf "aws s3 cp s3://${SRC_NOTEBOOK_DIR}/${notebook} ${Sagedir}/${industry}\n"
+          aws s3 cp s3://"${SRC_NOTEBOOK_DIR}"/"${notebook}" ${Sagedir}/${industry}
         done
 }
 

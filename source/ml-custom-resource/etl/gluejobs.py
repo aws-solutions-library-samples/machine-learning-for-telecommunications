@@ -28,9 +28,11 @@ class GlueJobs(Custom):
     def __init__(self, event, context, job_name, database=None, data_location=None, bucket=None, s3_prefix_artifacts=None, output_path=None):
         super().__init__(event, context,bucket,s3_prefix_artifacts)
         self.glue_client = boto3.client('glue')
+        self.kms = boto3.client('kms')
         self.s3 = boto3.client('s3')
         self.invoke_gluejob = self.event["ResourceProperties"]["InvokeGlueJob"]
         self.region = os.environ['AWS_DEFAULT_REGION']
+        self.account_id = os.environ['AWS_ACCOUNT_ID']
         self.job_name = job_name
         self.data_location = data_location
         self.bucket = bucket
@@ -39,6 +41,7 @@ class GlueJobs(Custom):
         self.output_path = output_path
 
     def __call__(self):
+        self.put_data_catalog_encryption()
         self.create_table(self.database, self.bucket, self.data_location)
         if self.invoke_gluejob == "true":
             self.start_job()
@@ -50,7 +53,7 @@ class GlueJobs(Custom):
     def create_table(self,database,bucket,data_location,classification='csv'):
 
         try:
-            catalog_id = boto3.client('sts').get_caller_identity()['Account']
+            catalog_id = self.account_id
             artifacts = super().get_artifactJson()
 
             schema_file = artifacts['artifacts']['schema']['custom-schema']
@@ -89,6 +92,23 @@ class GlueJobs(Custom):
             raise e
 
         return response
+
+    def put_data_catalog_encryption(self):
+        try:
+            catalog_id = self.account_id
+            response = self.glue_client.put_data_catalog_encryption_settings(
+                CatalogId=catalog_id,
+                DataCatalogEncryptionSettings={
+                    'EncryptionAtRest': {
+                        'CatalogEncryptionMode': 'SSE-KMS'
+                    }
+                }
+            )
+            return response
+
+        except Exception as e:
+            print('An error occurred: {}.'.format(e))
+            raise e
 
     def get_columns(self,schema_file):
         try:

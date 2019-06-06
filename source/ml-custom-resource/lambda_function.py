@@ -25,6 +25,7 @@ from ml.sagemaker import Sagemaker
 
 handler = cfn_resource.Resource()
 
+acct_id = os.environ['AWS_ACCOUNT_ID']
 sb_bucket = os.environ['SB_BUCKET']
 s3_bucket = os.environ['S3_BUCKET']
 s3_prefix_rawdata = os.environ['S3_PREFIX_RAWDATA']
@@ -35,6 +36,7 @@ config_name = os.environ['LifeCycleConfigName']
 job_name = os.environ['GlueJob']
 database = os.environ['Database']
 output_path = os.environ['OutputPath']
+
 
 @handler.create
 def lambda_handler(event, context):
@@ -61,7 +63,26 @@ def lambda_handler(event, context):
 
 @handler.update
 def on_update(event, context):
-    return {}
+    try:
+
+        if "MlArtifactsResource" == event["LogicalResourceId"]:
+            artifacts = Artifacts(event, context, s3_bucket, s3_destination_bucket, sb_bucket, sb_prefix_artifacts,
+                                  s3_prefix_artifacts, s3_prefix_rawdata, output_path)
+            artifacts.__call__()
+        elif "MlGlueResource" == event["LogicalResourceId"]:
+            glue_job = GlueJobs(event, context, job_name, database, s3_prefix_rawdata, s3_bucket, s3_prefix_artifacts,
+                                output_path)
+            glue_job.__call__()
+        elif "MlSagemakerResource" == event["LogicalResourceId"]:
+            sagemaker = Sagemaker(event, context, config_name, s3_bucket, s3_prefix_artifacts)
+            sagemaker.__call__()
+
+        physical_resource_id = {'PhysicalResourceId': event["LogicalResourceId"]}
+    except Exception as e:
+        print('An error occurred: {}.'.format(e))
+        raise e
+
+    return physical_resource_id
 
 
 @handler.delete

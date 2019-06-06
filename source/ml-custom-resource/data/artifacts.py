@@ -18,12 +18,13 @@
 import boto3
 import os
 import logging
+import json
+import time
 from botocore.client import Config, ClientError
 from custom.custom_base import Custom
 
 log = logging.getLogger()
 log.setLevel(logging.INFO)
-
 
 class Artifacts(Custom):
     def __init__(self, event, context, s3_bucket, s3_destination_bucket, sb_bucket, sb_prefix_artifacts,
@@ -33,8 +34,10 @@ class Artifacts(Custom):
         self.copy_artifactItems = event["ResourceProperties"]["CopyArtifacts"]
         self.copy_synthetic_data = event["ResourceProperties"]["TransferSyntheticData"]
         self.s3 = boto3.client('s3', config=Config(signature_version='s3v4'))
+        self.s3control = boto3.client('s3control')
         self.s3resource = boto3.resource('s3')
         self.region = os.environ['AWS_DEFAULT_REGION']
+        self.account_id = os.environ['AWS_ACCOUNT_ID']
         self.s3_bucket = s3_bucket
         self.s3_destination_bucket = s3_destination_bucket
         self.sb_bucket = sb_bucket
@@ -44,7 +47,6 @@ class Artifacts(Custom):
 
         self.s3_prefix_rawdata = s3_prefix_rawdata
         self.sb_prefix_rawdata = sb_prefix_artifacts + "/data"
-        #self.sb_prefix_rawdata = sb_prefix_artifacts + "/synthetic-data/industry/{}".format(industry)
         self.sb_prefix_config = sb_prefix_artifacts + "/config"
         self.s3_prefix_config = s3_prefix_artifacts + "/config"
         self.sb_prefix_notebook = sb_prefix_artifacts + "/notebooks"
@@ -91,19 +93,23 @@ class Artifacts(Custom):
 
         return {'PhysicalResourceId': self.event["LogicalResourceId"]}
 
-    def create_bucket(self, *args):
+    def create_bucket(self, src_bucket, dest_bucket):
+        bucket_list = [src_bucket] if src_bucket == dest_bucket else [src_bucket, dest_bucket]
+        print('Bucket List: {}'.format(bucket_list))
         try:
-            for bucket in args:
+            for bucket in bucket_list:
                 if not self.check_bucket(bucket):
                     # https://docs.aws.amazon.com/cli/latest/reference/s3api/create-bucket.html
                     # Regions outside of us-east-1 require the appropriate LocationConstraint to be specified in order to create the bucket in the desired region:
-                    bucket_name = self.s3.create_bucket(
+                    bucket_response = self.s3.create_bucket(
                         Bucket=bucket) if 'us-east-1' == self.region else self.s3.create_bucket(Bucket=bucket,
                                                                                                 CreateBucketConfiguration={
                                                                                                     'LocationConstraint': self.region})
-
-                    log.info('S3 Bucket = %s', bucket_name)
-
+                    response = self.put_bucket_encryption(bucket)
+                    response = self.put_bucket_policy(bucket)
+                    response = self.put_public_access_block()
+                    log.info('S3 Bucket = %s', bucket_response)
+                    log.info('Response = %s', response)
         except Exception as e:
             print('An error occurred: {}.'.format(e))
             raise e
@@ -125,14 +131,82 @@ class Artifacts(Custom):
                 print("Bucket Does Not Exist!")
                 return False
 
+    def put_bucket_encryption(self, bucket_name):
+        try:
+            response = self.s3.put_bucket_encryption(
+                Bucket=bucket_name,
+                ServerSideEncryptionConfiguration={
+                    'Rules': [
+                        {
+                            'ApplyServerSideEncryptionByDefault': {
+                                'SSEAlgorithm': 'AES256'
+                            }
+                        },
+                    ]
+                }
+            )
+            log.info('Response = %s', response)
+            return response
+        except Exception as e:
+            print('An error occurred: {}.'.format(e))
+            raise e
+
+    def put_bucket_policy(self, bucket_name):
+
+        try:
+            bucket_policy = {
+                "Statement": [
+                    {
+                        "Action": ["s3:GetObject", "s3:PutObject","s3:DeleteObject", "s3:ListBucket"],
+                        "Effect": "Deny",
+                        "Principal": { "AWS": "{accountid}".format(accountid=self.account_id) },
+                        "Resource": [
+                            "arn:aws:s3:::{bucketname}/*".format(bucketname=bucket_name),
+                            "arn:aws:s3:::{bucketname}".format(bucketname=bucket_name),
+                        ],
+                        "Condition": {
+                            "Bool":
+                                {"aws:SecureTransport": "false"}
+                        }
+                    }
+                ]
+            }
+            # Convert the policy to a JSON string
+            bucket_policy = json.dumps(bucket_policy)
+            # Sets the new policy on the given bucket
+            response = self.s3.put_bucket_policy(Bucket=bucket_name, Policy=bucket_policy)
+            log.info('Response = %s', response)
+
+            return response
+        except Exception as e:
+            print('An error occurred: {}.'.format(e))
+            raise e
+
+    def put_public_access_block(self):
+        try:
+            response = self.s3control.put_public_access_block(
+                PublicAccessBlockConfiguration={
+                    'BlockPublicAcls': True,
+                    'IgnorePublicAcls': True,
+                    'BlockPublicPolicy': True,
+                    'RestrictPublicBuckets': True
+                },
+                AccountId=self.account_id
+            )
+            log.info('Response = %s', response)
+            return response
+        except Exception as e:
+            print('An error occurred: {}.'.format(e))
+            raise e
+
     def copy_config(self,s3_prefix, sb_prefix,value):
         try:
             new_bucket = self.s3_bucket
             copy_source = "{}/{}/{}".format(self.sb_bucket, sb_prefix, value)
             bucket_key = "{}/{}".format(s3_prefix, value)
 
-            response = self.s3.copy_object(ACL='public-read', CopySource=copy_source, Bucket=new_bucket,
-                                           Key=bucket_key)
+            response = self.s3.copy_object(CopySource=copy_source, Bucket=new_bucket,
+                                           Key=bucket_key, ServerSideEncryption='AES256')
             log.info('Response = %s', response)
             log.info('Copying %s to %s/%s', copy_source, new_bucket, bucket_key)
             status = 'SUCCESS'
@@ -153,14 +227,15 @@ class Artifacts(Custom):
                     copy_source = "{}/{}/{}/{}".format(self.sb_bucket, sb_prefix, key, value)
                     bucket_key = "{}/{}/{}".format(s3_prefix, key, value)
 
-                response = self.s3.copy_object(ACL='public-read', CopySource=copy_source, Bucket=new_bucket,
-                                               Key=bucket_key)
+                response = self.s3.copy_object(CopySource=copy_source, Bucket=new_bucket,
+                                               Key=bucket_key, ServerSideEncryption='AES256')
                 log.info('Response = %s', response)
                 log.info('Copying %s to %s/%s', copy_source, new_bucket, bucket_key)
 
             responseStatus = 'SUCCESS'
 
         except Exception as e:
+            print('copy_source: {}/{}/{}/{}'.format(self.sb_bucket, sb_prefix, key, value))
             print('An error occurred: {}.'.format(e))
             raise e
         return responseStatus
@@ -180,14 +255,20 @@ class Artifacts(Custom):
                 '"<%s3region%>"': s3region,
                 '"<%SRC_NOTEBOOK_DIR%>"': "{}/{}".format(self.s3_bucket, self.s3_prefix_notebook),
                 '"<%SRC_DATA_DIR%>"': "{}/{}".format(self.s3_bucket, self.s3_prefix_rawdata),
-                '"<%DESTINATION_DATA_DIR%>"': destination_data_dir
+                '"<%DESTINATION_DATA_DIR%>"': destination_data_dir,
+                '"<%bucket_name%>"': self.s3_bucket
+
             }
 
             try:
+
+                time.sleep(5) #Delay to let bucket create
                 object = self.s3resource.Object(bucket, key)
                 obj_data = object.get()['Body'].read().decode('utf-8')
+                print("obj_data : {}".format(obj_data))
                 for key, value in update_item.items():
                     obj_data = obj_data.replace(key, value)
+                print("Object2 : {}".format(object))
                 object.put(Body=obj_data)
 
             except ClientError as e:
