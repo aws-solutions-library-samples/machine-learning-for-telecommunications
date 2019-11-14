@@ -1,3 +1,4 @@
+
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "(SO0033) - machine-learning-for-all: Machine Learning for All is a solution that helps data scientists in the industry get started using machine learning to generate insights from their data. The solution provides a framework for an end-to-end machine learning process including ad-hoc data exploration, data processing and feature engineering, and modeling training and evaluation.",
@@ -157,13 +158,18 @@
     },
     "SB": {
       "Src": {
-        "Bucket": "%%DIST_BUCKET_NAME%%",
+        "Bucket": "%%BUCKET_NAME%%",
         "SolutionName": "%%SOLUTION_NAME%%"
       }
     },
     "Function": {
+      "SolutionHelper" : {
+        "S3Bucket" : "%%BUCKET_NAME%%",
+        "S3Key" : "%%SOLUTION_NAME%%/%%VERSION%%/local-solution-helper.zip",
+        "Description": "CloudFormation custom resource function invoked for sending anonymous data and creating unique ID."
+      },
       "CustomResource": {
-        "S3Bucket": "%%DIST_BUCKET_NAME%%",
+        "S3Bucket": "%%BUCKET_NAME%%",
         "S3Key": "%%SOLUTION_NAME%%/%%VERSION%%/ml-custom-resource.zip",
         "Description": "machine-learning-for-all: CloudFormation custom resource function invoked during CloudFormation create, update, and delete stack operations."
       }
@@ -890,7 +896,7 @@
             ]
           }
         },
-        "Runtime": "python3.6",
+        "Runtime": "python3.7",
         "Timeout": 240
       }
     },
@@ -933,6 +939,7 @@
       "Properties": {
         "Command": {
           "Name": "glueetl",
+          "PythonVersion": "3",
           "ScriptLocation": {
             "Fn::Join": [
               "",
@@ -958,6 +965,7 @@
             ]
           }
         },
+        "GlueVersion": "1.0",
         "ExecutionProperty": {
           "MaxConcurrentRuns": 3
         },
@@ -1219,29 +1227,24 @@
     "SolutionHelper": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
-        "Handler": "solution-helper.lambda_handler",
+        "Handler": "local_solution_helper/solution-helper.lambda_handler",
         "Role": {
           "Fn::GetAtt": [
             "SolutionHelperRole",
             "Arn"
           ]
         },
-        "Description": "This function creates a CloudFormation custom lambda resource that creates custom lambda functions by finding and replacing specific values from existing lambda function code.",
+        "Description": { "Fn::FindInMap" : [ "Function", "SolutionHelper", "Description"] },
         "Code": {
           "S3Bucket": {
             "Fn::Join": [
               "",
-              [
-                "solutions-",
-                {
-                  "Ref": "AWS::Region"
-                }
-              ]
+              [ { "Fn::FindInMap" : [ "Function", "SolutionHelper", "S3Bucket"]}, "-", { "Ref": "AWS::Region" } ]
             ]
           },
-          "S3Key": "library/solution-helper/v3/solution-helper.zip"
+          "S3Key": { "Fn::FindInMap" : [ "Function", "SolutionHelper", "S3Key"] }
         },
-        "Runtime": "python2.7",
+        "Runtime": "python3.7",
         "Timeout": 300
       }
     },
@@ -1313,7 +1316,7 @@
               {
                 "Ref": "AWS::Region"
               },
-              "'",
+              "',",
               "'SendAnonymousData': '",
               {
                 "Fn::FindInMap": [

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 ######################################################################################################################
-#  Copyright 2018-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.                                      #
+#  Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.                                           #
 #                                                                                                                    #
 #  Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance    #
 #  with the License. A copy of the License is located at                                                             #
@@ -13,38 +13,21 @@
 #  and limitations under the License.                                                                                #
 ######################################################################################################################
 
-import json
-import boto3
+from setuptools import setup, find_packages
 
-
-class Custom(object):
-    def __init__(self, event, context,bucket=None,prefix=None):
-        self.event = event
-        self.context = context
-        self.physical_resource_id = {'PhysicalResourceId': 'machine-learning-resource'}
-        self.bucket = bucket
-        self.prefix = prefix
-        self.config_file = "ArtifactsConfig.json"
-
-    def read_json(self,bucket,key):
-        try:
-            obj = boto3.client('s3').get_object(Bucket=bucket, Key=key)
-            content = obj['Body'].read().decode('utf-8')
-            json_content = json.loads(content)
-            return json_content
-
-        except Exception as e:
-            print('An error occurred: {}.'.format(e))
-            raise e
-
-    def get_artifactJson(self):
-        try:
-            key = "{}/config/{}".format(self.prefix,self.config_file)
-            artifacts_json = self.read_json(self.bucket,key)
-            return artifacts_json
-
-        except Exception as e:
-            print('An error occurred: {}.'.format(e))
-            raise e
-
-
+setup(
+    name='local_solution_helper',
+    version='1.0.0',
+    description='AWS Solution Helper Custom Resource',
+    author='AWS Solutions Builder',
+    license='Apache 2.0',
+    zip_safe=False,
+    packages=['local_solution_helper', 'pycfn_custom_resource'],
+    package_dir={'local_solution_helper': '.', 'pycfn_custom_resource': './pycfn_custom_resource'},
+    install_requires=[
+        'requests>=2.22.0'
+    ],
+    classifiers=[
+        'Programming Language :: Python :: 3.7',
+    ],
+)

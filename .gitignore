@@ -1,0 +1,24 @@
+# Compiled and built output files
+**/global-s3-assets
+**/regional-s3-assets
+**/open-source
+**/tmp
+
+# python output
+**/__pycache__
+**/pytests
+**/*.egg-info
+**/*.pyc
+**/pypackage
+
+# misc
+**.pem
+
+# System Files and IDE files
+**/.DS_Store
+## VSCodium files
+**/.vscode
+**/*.code-workspace
+## IntelliJ files
+**/.idea
+**/*.iml
